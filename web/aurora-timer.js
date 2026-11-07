@@ -119,5 +119,9 @@ var AuroraSleep = (function () {
     }
   }
   inspectExpiry();
+  // On some firmware the existing app resumes rather than reloading when an alarm launches it.
+  document.addEventListener('visibilitychange',function(){if(!document.hidden)inspectExpiry();},false);
+  window.addEventListener('pageshow',inspectExpiry,false);
+  window.addEventListener('appcontrol',inspectExpiry,false);
   return {open:open,close:close,visible:visible};
 })();
