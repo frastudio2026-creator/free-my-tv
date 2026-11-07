@@ -658,11 +658,6 @@
     drawerItems.push({label: tr('All Apps'), symbol: 'apps', run: openApps});
     drawerItems.push({label: tr('Home Settings'), symbol: 'settings', run: openSettings});
     if (TV.canOpenSettings) drawerItems.push({label: tr('TV Settings'), symbol: 'tv_settings', run: tvSettings});
-    // Q74T: use Samsung's real system sleep timer so it survives switching apps.
-    // A Tizen web app cannot safely set the system timer directly; do not present a fake countdown.
-    if (TV.canOpenSettings && hasClass(body, 'aurora-theme')) {
-      drawerItems.push({label: 'Timer spegnimento', symbol: 'bedtime', run: tvSettings});
-    }
     var n = drawerItems.length, gap = 18, groupGap = 56, groups = drawerInputs > 0 && drawerInputs < n ? 2 : 1;
     var tw = Math.min(230, (1760 - Math.max(0, n - groups) * gap - (groups - 1) * groupGap) / Math.max(1, n));
     var xPos = 80;
