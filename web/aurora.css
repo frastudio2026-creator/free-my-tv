@@ -1,0 +1,46 @@
+/*
+ * Aurora Borealis Intense — Samsung Tizen theme.
+ * Static GPU-friendly gradients; no timers, canvases, animated filters or external assets.
+ * Scope to .aurora-theme so the stock UI and other TV platforms stay unchanged.
+ */
+html:has(body.aurora-theme) { background: #041029; }
+body.aurora-theme { color: #F3FAFF; background: #041029; }
+.aurora-theme #sky {
+  background: #041029;
+}
+.aurora-theme #sky .day,
+.aurora-theme #sky .night,
+.aurora-theme #sky canvas {
+  opacity: 0 !important;
+}
+.aurora-theme #sky .grad.night {
+  opacity: 1 !important;
+  background:
+    -webkit-linear-gradient(155deg, rgba(52,224,160,0.0) 17%, rgba(22,231,174,0.65) 35%, rgba(4,27,63,0.05) 48%, rgba(131,64,232,0.63) 69%, rgba(2,10,30,0.05) 88%),
+    -webkit-linear-gradient(36deg, #041029 6%, #09385b 42%, #251364 70%, #06112b 100%);
+  background:
+    linear-gradient(115deg, rgba(52,224,160,0) 17%, rgba(22,231,174,0.65) 35%, rgba(4,27,63,0.05) 48%, rgba(131,64,232,0.63) 69%, rgba(2,10,30,0.05) 88%),
+    linear-gradient(36deg, #041029 6%, #09385b 42%, #251364 70%, #06112b 100%);
+}
+.aurora-theme #sky .veil {
+  background: -webkit-linear-gradient(top, rgba(3,9,28,0.20), rgba(3,9,28,0.48) 57%, rgba(3,9,28,0.78));
+  background: linear-gradient(to bottom, rgba(3,9,28,0.20), rgba(3,9,28,0.48) 57%, rgba(3,9,28,0.78));
+}
+.aurora-theme #sky .lift { background: #06142c; }
+.aurora-theme #title, .aurora-theme .tab.on, .aurora-theme #clock { color: #F1FAFF; }
+.aurora-theme .tab { color: rgba(228,247,255,0.76); }
+.aurora-theme .tab.focus { background: #DCFDF4; color: #05233D; }
+.aurora-theme #quotes, .aurora-theme #clock .date { color: rgba(226,245,255,0.76); }
+.aurora-theme .round {
+  background: rgba(6,29,62,0.82);
+  color: #E7FCFF;
+  box-shadow: inset 0 0 0 1px rgba(102,244,217,0.25);
+}
+.aurora-theme .round.focus { background: #D5FFF1; color: #05243A; }
+.aurora-theme #platter {
+  background: rgba(5,22,51,0.84);
+  box-shadow: inset 0 1px 0 rgba(122,241,218,0.32), 0 14px 44px rgba(0,0,0,0.30);
+}
+.aurora-theme .card .name { color: #F3FAFF; }
+.aurora-theme .card .meta { color: rgba(223,242,255,0.77); }
+.aurora-theme #toast { background: rgba(5,25,54,0.95); color: #E8FCFF; }
