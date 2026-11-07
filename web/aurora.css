@@ -3,7 +3,6 @@
  * Static GPU-friendly gradients; no timers, canvases, animated filters or external assets.
  * Scope to .aurora-theme so the stock UI and other TV platforms stay unchanged.
  */
-html:has(body.aurora-theme) { background: #041029; }
 body.aurora-theme { color: #F3FAFF; background: #041029; }
 .aurora-theme #sky {
   background: #041029;
