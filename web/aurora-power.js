@@ -32,7 +32,7 @@ var AuroraPower = (function () {
         if(data.event==='ms.channel.connect') {
           try {
             ws.send(JSON.stringify({method:'ms.remote.control',params:{Cmd:'Click',DataOfCmd:'KEY_POWEROFF',Option:'false',TypeOfRemote:'SendRemoteKey'}}));
-            finish(true,'Comando inviato: verifica che la TV si sia spenta.');
+            setTimeout(function(){finish(true,'Comando inviato: verifica che la TV si sia spenta.');},400);
           }catch(e){finish(false,'Comando rifiutato: '+e.message);}
         }
         if(data.event==='ms.channel.unauthorized') finish(false,'Autorizzazione telecomando negata.');
