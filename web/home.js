@@ -1567,7 +1567,7 @@
   var lastNight = null;
 
   function checkNight() {
-    var night = Data.isNight(Date.now());
+    var night = Data.isNight(Date.now()) || hasClass(body, 'aurora-theme');
     setClass(body, 'night', night);
     if (night === lastNight) return;
     lastNight = night;
