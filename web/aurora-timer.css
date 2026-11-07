@@ -1,0 +1,11 @@
+/* Aurora sleep dialog: keyboard/Smart Remote focus, no Samsung system UI. */
+#aurora-timer { position:absolute; top:0; left:0; width:1920px; height:1080px; z-index:55; background:rgba(2,8,24,.86); color:#F2FFFF; }
+.aurora-timer-box { position:absolute; left:360px; top:195px; width:1200px; box-sizing:border-box; padding:62px 72px; border-radius:42px; background:#092345; box-shadow:0 30px 90px rgba(0,0,0,.54),inset 0 0 0 2px rgba(80,237,186,.34); }
+.aurora-timer-kicker { font-size:23px; letter-spacing:4px; color:#76EDCF; font-weight:700; }
+.aurora-timer-title { font-size:65px; margin-top:18px; font-weight:650; }
+.aurora-timer-description { font-size:28px; color:#BDDBF1; }
+.aurora-timer-actions { margin-top:35px; }
+.aurora-timer-actions button { min-width:240px; padding:25px 26px; margin:0 14px 18px 0; border-radius:22px; border:2px solid rgba(118,237,207,.30); color:#F2FFFF; background:#153E5E; font-size:28px; }
+.aurora-timer-actions button.selected,.aurora-timer-actions button:focus { background:#8CF5CF; color:#05283B; border-color:#D3FFF1; }
+.aurora-timer-status { font-size:26px; color:#ABF5DD; margin:22px 0; }
+.aurora-timer-warning { font-size:21px; color:#A4BDD2; line-height:1.4; }

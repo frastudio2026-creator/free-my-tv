@@ -5,14 +5,20 @@
 <meta name="viewport" content="width=1920, height=1080">
 <title>Free My TV</title>
 <link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="aurora.css">
+<link rel="stylesheet" href="aurora-timer.css">
 </head>
 <body>
 <script>
+  // Custom aurora theme: opt-in only on Samsung Tizen, retaining other platforms unchanged.
+  if (typeof window.tizen !== "undefined" || /(?:[?&])aurora=1(?:&|$)/.test(window.location.search)) {
+    document.body.className = "aurora-theme night";
+  }
   // The look the home screen last had, before anything is drawn, so a night start doesn't flash the day one first.
   try {
     if (localStorage.getItem('fmtv.night') === 'true') {
       document.documentElement.style.background = '#0B0B0D';
-      document.body.className = 'night';
+      document.body.className += ' night';
     }
   } catch (e) {}
 </script>
@@ -57,6 +63,8 @@
 <script src="tv.js"></script>
 <script src="zones.js"></script>
 <script src="data.js"></script>
+<script src="aurora-power.js"></script>
+<script src="aurora-timer.js"></script>
 <script src="home.js"></script>
 </body>
 </html>
