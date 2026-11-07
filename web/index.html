@@ -10,7 +10,7 @@
 <body>
 <script>
   // Custom aurora theme: opt-in only on Samsung Tizen, retaining other platforms unchanged.
-  if (typeof window.tizen !== "undefined") {
+  if (typeof window.tizen !== "undefined" || /(?:[?&])aurora=1(?:&|$)/.test(window.location.search)) {
     document.body.className = "aurora-theme night";
   }
   // The look the home screen last had, before anything is drawn, so a night start doesn't flash the day one first.
